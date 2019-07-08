@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FullImageViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIImageView *fullImageView;
 @property (strong, nonatomic) UIImage *photo;
 
 

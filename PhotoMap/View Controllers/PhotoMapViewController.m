@@ -29,8 +29,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //one degree of latitude is approximately 111 kilometers (69 miles) at all times.
-    MKCoordinateRegion sfRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.783333, -122.416667), MKCoordinateSpanMake(0.1, 0.1));
-    [self.mapView setRegion:sfRegion animated:false];
+    //MKCoordinateRegion sfRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.783333, -122.416667), MKCoordinateSpanMake(0.1, 0.1));
+    
+    MKCoordinateRegion nyRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(40.7128, -74.006), MKCoordinateSpanMake(0.1, 0.1));
+    [self.mapView setRegion:nyRegion animated:false];
     self.imagePickerVC = [UIImagePickerController new];
     self.imagePickerVC.delegate = self;
     self.imagePickerVC.allowsEditing = YES;
@@ -81,14 +83,21 @@
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
-    MKPinAnnotationView *annotationView = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"Pin"];
+    MKAnnotationView *annotationView = (MKAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"Pin"];
     if (annotationView == nil) {
-        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"Pin"];
+        annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"Pin"];
         annotationView.canShowCallout = true;
         annotationView.leftCalloutAccessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 50.0, 50.0)];
+        
+        // Full image button
         UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         annotationView.rightCalloutAccessoryView = button;
+
     }
+    
+    // Custom image to replace pin
+    UIImage *thumbnail = [self resizeImage:self.selectedPhoto withSize:CGSizeMake(50.0, 50.0)];
+    annotationView.image = thumbnail;
     
     UIImageView *imageView = (UIImageView*)annotationView.leftCalloutAccessoryView;
     imageView.image = self.selectedPhoto;
@@ -121,7 +130,6 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"fullImageSegue"]) {
         FullImageViewController *fullImageViewController = [segue destinationViewController];
-        
         
         MKAnnotationView *annotationView = sender;
         UIImageView *imageView = (UIImageView*)annotationView.leftCalloutAccessoryView;

@@ -10,6 +10,8 @@
 
 @interface FullImageViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *fullImageView;
+
 @end
 
 @implementation FullImageViewController

@@ -18,13 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sRB-t4-gRi">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sRB-t4-gRi">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvz-HR-ggq">
-                                <rect key="frame" x="152" y="554" width="70" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvz-HR-ggq">
+                                <rect key="frame" x="152.5" y="552" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="ccb-fO-frI"/>
+                                    <constraint firstAttribute="height" constant="70" id="vjt-XW-3lX"/>
+                                </constraints>
                                 <state key="normal" image="camera"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J9a-bu-87k"/>
@@ -32,6 +34,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sRB-t4-gRi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0np-L9-Rla"/>
+                            <constraint firstItem="sRB-t4-gRi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1T8-nW-AnN"/>
+                            <constraint firstItem="lvz-HR-ggq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8fX-fO-45r"/>
+                            <constraint firstItem="sRB-t4-gRi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O7E-76-gom"/>
+                            <constraint firstItem="sRB-t4-gRi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bDP-JH-1OR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lvz-HR-ggq" secondAttribute="bottom" constant="45" id="pMZ-lt-3Tb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="p1y-Ku-BJR"/>
@@ -63,11 +73,11 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LocationCell" rowHeight="61" id="y7L-pG-TRL" customClass="LocationCell">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="61"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LocationCell" id="y7L-pG-TRL" customClass="LocationCell">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y7L-pG-TRL" id="sAK-kx-BbN">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="60.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fzg-nZ-8sL">
@@ -137,12 +147,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tjR-aB-eu0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tjR-aB-eu0">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tjR-aB-eu0" firstAttribute="leading" secondItem="iB2-E3-wo8" secondAttribute="leading" id="7SW-M3-nLV"/>
+                            <constraint firstItem="tjR-aB-eu0" firstAttribute="bottom" secondItem="iB2-E3-wo8" secondAttribute="bottom" id="Dod-u0-hKX"/>
+                            <constraint firstItem="tjR-aB-eu0" firstAttribute="trailing" secondItem="iB2-E3-wo8" secondAttribute="trailing" id="NhT-Iu-tam"/>
+                            <constraint firstItem="tjR-aB-eu0" firstAttribute="top" secondItem="iB2-E3-wo8" secondAttribute="top" id="WDi-Pa-QEl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iB2-E3-wo8"/>
                     </view>
                     <connections>
