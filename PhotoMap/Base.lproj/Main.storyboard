@@ -87,14 +87,14 @@
                                                         <constraint firstAttribute="height" constant="32" id="yBW-dh-Q5I"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thai Basil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlx-Dj-obh">
-                                                    <rect key="frame" x="48" y="14" width="286" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Thai Basil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlx-Dj-obh">
+                                                    <rect key="frame" x="48" y="14" width="286" height="13"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="101 S Murphy Ave" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEv-ev-UD4">
-                                                    <rect key="frame" x="48" y="33" width="286" height="15"/>
+                                                    <rect key="frame" x="48" y="29" width="286" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.43902853260000002" green="0.43902853260000002" blue="0.43902853260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -108,6 +108,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="Qlx-Dj-obh" secondAttribute="trailing" constant="8" id="iuf-mJ-wyk"/>
                                                 <constraint firstItem="hEv-ev-UD4" firstAttribute="leading" secondItem="fzg-nZ-8sL" secondAttribute="trailing" constant="8" id="lXI-ds-iEv"/>
                                                 <constraint firstItem="Qlx-Dj-obh" firstAttribute="top" secondItem="sAK-kx-BbN" secondAttribute="top" constant="14" id="m0a-n8-xAa"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hEv-ev-UD4" secondAttribute="bottom" constant="4" id="p6o-Mc-fvl"/>
                                                 <constraint firstItem="hEv-ev-UD4" firstAttribute="top" secondItem="Qlx-Dj-obh" secondAttribute="bottom" constant="2" id="rMI-rl-Ohm"/>
                                                 <constraint firstItem="fzg-nZ-8sL" firstAttribute="top" secondItem="sAK-kx-BbN" secondAttribute="top" constant="11" id="uJn-GB-CBt"/>
                                             </constraints>

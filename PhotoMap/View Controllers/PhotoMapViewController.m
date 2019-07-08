@@ -74,7 +74,7 @@
     // Add annotation
     PhotoAnnotation *point = [[PhotoAnnotation alloc] init];
     point.coordinate = coordinate;
-    point.photo = [self resizeImage:self.selectedPhoto withSize:CGSizeMake(50.0, 50.0)];
+    point.photo = [self resizeImage:self.selectedPhoto withSize:CGSizeMake(40.0, 40.0)];
     
     [self.mapView addAnnotation:point];
     self.mapView.delegate = self;
